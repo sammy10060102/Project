@@ -1,0 +1,52 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  p Please put in your below details to get your insurance premium quote 
+  
+  form(name="insurance-cost-calc", method="get")
+        div.input
+            span.label Age
+            input(type="number", name="Age")
+        br
+        label Sex
+        div.input      
+            span.label Male
+            input(type="radio", name="Sex", value="Male") 
+            span.label Female          
+            input(type="radio", name="Sex", value="Female") 
+        br
+        label Smoker
+        div.input
+            span.label Yes
+            input(type="radio", name="Smoker", value="Yes")
+            span.label No
+            input(type="radio", name="Smoker", value="No")
+        br
+        div.input
+            span.label Children
+            input(type="number", name="Children")
+        br
+        div.input
+            span.label BMI
+            input(type="number", name="BMI")
+        br
+        span.label Region
+        div.input
+            span.label SouthEast
+            input(type="radio", name="region", value="southeast")
+            span.label SouthWest
+            input(type="radio", name="region", value="southwest")
+            span.label NorthEast
+            input(type="radio", name="region", value="northeast")
+            span.label NorthWest
+            input(type="radio", name="region", value="NorthWest")
+        br
+        div.actions
+            input(type="submit", value="Get Quote!")
+        
+  
+
+
